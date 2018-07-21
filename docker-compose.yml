@@ -1,0 +1,37 @@
+version: '3'
+
+# volumes:
+#   moosivp:
+#     source: ./moos-ivp
+#     target: /root/moos-ivp:ro
+
+services:
+  ubuntu14-builder:
+    image: moosivp:ubuntu1404
+    build:
+      context: ./ubuntu1404
+
+  ubuntu16-builder:
+    image: moosivp:ubuntu1604
+    build:
+      context: ./ubuntu1604
+
+  ubuntu18-builder:
+    image: moosivp:ubuntu1804
+    build:
+      context: ./ubuntu1804
+
+  debian8-builder:
+    image: moosivp:debian8
+    build:
+      context: ./debian8
+
+  debian9-builder:
+    image: moosivp:debian9
+    build:
+      context: ./debian9
+
+  centos7-builder:
+    image: moosivp:centos7
+    build:
+      context: ./centos7
