@@ -4,6 +4,7 @@ LABEL maintainer "Mohamed Saad Ibn Seddik <ms.ibnseddik@gmail.com>"
 RUN apt-get -qq update && apt-get -qq install \
     --no-install-recommends \
     clang \
+    binutils \
     make \
     cmake \
     subversion \
