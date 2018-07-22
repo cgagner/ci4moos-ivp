@@ -1,13 +1,13 @@
 FROM ubuntu:16.04
 LABEL maintainer "Mohamed Saad Ibn Seddik <ms.ibnseddik@gmail.com>"
 
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && apt-get install -yq \
     --no-install-recommends \
     g++ \
     make \
     cmake \
     subversion \
-    openssl\
+    openssl \
     ca-certificates \
  && rm -rf /var/lib/apt/lists/*
 
