@@ -1,7 +1,7 @@
 FROM ubuntu:18.04
 LABEL maintainer "Mohamed Saad Ibn Seddik <ms.ibnseddik@gmail.com>"
 
-RUN apt-get update && apt-get install -yq \
+RUN apt-get -qq update && apt-get -qq install \
     --no-install-recommends \
     g++ \
     make \

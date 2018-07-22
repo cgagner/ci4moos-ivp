@@ -6,7 +6,7 @@ services:
     build:
       context: ./ubuntu1404
 
-  ubuntu14-builder:
+  ubuntu14-builder-clang:
     image: moosivp:ubuntu1404-clang
     build:
       context: ./ubuntu1404-clang
@@ -16,7 +16,7 @@ services:
     build:
       context: ./ubuntu1604
 
-  ubuntu16-builder:
+  ubuntu16-builder-clang:
     image: moosivp:ubuntu1604-clang
     build:
       context: ./ubuntu1604-clang
@@ -26,7 +26,7 @@ services:
     build:
       context: ./ubuntu1804
 
-  ubuntu18-builder:
+  ubuntu18-builder-clang:
     image: moosivp:ubuntu1804-clang
     build:
       context: ./ubuntu1804-clang
