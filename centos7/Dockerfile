@@ -5,13 +5,11 @@ RUN yum -y install \
     gcc-c++ \
     make \
     cmake \
-    libtiff-devel \
     subversion \
  && rpm -V \
     gcc-c++ \
     make \
     cmake \
-    libtiff-devel \
     subversion \
  && yum clean all
 
