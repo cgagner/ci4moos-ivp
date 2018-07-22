@@ -1,10 +1,5 @@
 version: '3'
 
-# volumes:
-#   moosivp:
-#     source: ./moos-ivp
-#     target: /root/moos-ivp:ro
-
 services:
   ubuntu14-builder:
     image: moosivp:ubuntu1404
@@ -35,3 +30,22 @@ services:
     image: moosivp:centos7
     build:
       context: ./centos7
+
+  qemu-enabler:
+    image: multiarch/qemu-user-static:register
+    privileged: true
+    command: --reset
+
+  raspbian8-builder:
+    depends_on:
+      - qemu-enabler
+    image: moosivp:raspbian8
+    build:
+      context: ./raspbian8
+
+  raspbian9-builder:
+    depends_on:
+      - qemu-enabler
+    image: moosivp:raspbian9
+    build:
+      context: ./raspbian9
