@@ -6,15 +6,30 @@ services:
     build:
       context: ./ubuntu1404
 
+  ubuntu14-builder:
+    image: moosivp:ubuntu1404-clang
+    build:
+      context: ./ubuntu1404-clang
+
   ubuntu16-builder:
     image: moosivp:ubuntu1604
     build:
       context: ./ubuntu1604
 
+  ubuntu16-builder:
+    image: moosivp:ubuntu1604-clang
+    build:
+      context: ./ubuntu1604-clang
+
   ubuntu18-builder:
     image: moosivp:ubuntu1804
     build:
       context: ./ubuntu1804
+
+  ubuntu18-builder:
+    image: moosivp:ubuntu1804-clang
+    build:
+      context: ./ubuntu1804-clang
 
   debian8-builder:
     image: moosivp:debian8
