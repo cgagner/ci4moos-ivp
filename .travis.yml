@@ -10,6 +10,17 @@ addons:
 
 env:
   - DOCKER_COMPOSE_VERSION=1.22.0
+  - DOCKER_TARGET=ubuntu14-builder
+  - DOCKER_TARGET=ubuntu14-builder-clang
+  - DOCKER_TARGET=ubuntu16-builder
+  - DOCKER_TARGET=ubuntu16-builder-clang
+  - DOCKER_TARGET=ubuntu18-builder
+  - DOCKER_TARGET=ubuntu18-builder-clang
+  - DOCKER_TARGET=debian8-builder
+  - DOCKER_TARGET=debian9-builder
+  - DOCKER_TARGET=centos7-builder
+  - DOCKER_TARGET=raspbian8-builder
+  - DOCKER_TARGET=raspbian9-builder
 
 before_install:
   - sudo rm /usr/local/bin/docker-compose
@@ -19,4 +30,4 @@ before_install:
 
 script:
   - docker-compose up qemu-enabler
-  - docker-compose up --build
+  - docker-compose up --build $DOCKER_TARGET
